@@ -47,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
         children: const [
           HomeScreen(),
           ReportScreen(),
-          //CardsScreen(),
+          CardsScreen(),
           ProfileScreen(),
         ],
       ),

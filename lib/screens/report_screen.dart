@@ -11,6 +11,27 @@ class ReportScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: ListView(
           children: const [
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    CircleAvatar(child: Text("S")),
+                    SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Welcome back,"),
+                        Text("Md Nazir Ullah Khan",
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                  ],
+                ),
+                Icon(Icons.notifications),
+              ],
+            ),
+            SizedBox(height: 20),
             Text("Monthly Spending Report",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
 
@@ -19,16 +40,17 @@ class ReportScreen extends StatelessWidget {
             Card(
               child: Padding(
                 padding: EdgeInsets.all(16),
-                child: Text("-\$1270.00",
+                child: Text("1270.00Tk",
                     style: TextStyle(fontSize: 24, color: Colors.red)),
               ),
             ),
 
             SizedBox(height: 20),
-
-            SpendingBar("Food & Drink", 0.35, Colors.red),
-            SpendingBar("Shopping", 0.25, Colors.blue),
-            SpendingBar("Housing", 0.22, Colors.orange),
+            SpendingBar(title: "Food and Drink", value: 0.35, color:Colors.redAccent, amount:"450TK"),
+            SpendingBar(title: "Shopping", value: 0.75, color:Colors.orangeAccent, amount:"320Tk"),
+            SpendingBar(title: "Housing", value: 0.50, color:Colors.yellow, amount:"280TK"),
+            SpendingBar(title: "Transport", value: 0.20, color:Colors.deepPurpleAccent, amount:"150TK"),
+            SpendingBar(title: "Other", value: 0.15, color:Colors.grey, amount:"70TK"),
           ],
         ),
       ),

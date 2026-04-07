@@ -28,9 +28,9 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            infoCard("Name", "Student Name"),
-            infoCard("Student ID", "S12345"),
-            infoCard("Email", "student@email.com"),
+            infoCard("Name", "Md Nazir Ullah Khan"),
+            infoCard("Student ID", "2220072"),
+            infoCard("Email", "2220072@iub.edu.bd"),
 
             const SizedBox(height: 10),
 

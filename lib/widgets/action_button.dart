@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+class ActionButton extends StatelessWidget {
+  final IconData icon;
+  final String label;
+
+  const ActionButton({
+    super.key,
+    required this.icon,
+    required this.label,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 100,
+      padding: const EdgeInsets.symmetric(vertical: 15),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            blurRadius: 10,
+            offset: const Offset(0, 5),
+          )
+        ],
+      ),
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 20,
+            backgroundColor: Colors.blue.withOpacity(0.1),
+            child: Icon(icon, color: Colors.blue),
+          ),
+          const SizedBox(height: 10),
+          Text(label),
+        ],
+      ),
+    );
+  }
+}

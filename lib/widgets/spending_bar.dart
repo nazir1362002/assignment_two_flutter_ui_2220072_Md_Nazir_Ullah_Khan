@@ -4,22 +4,39 @@ class SpendingBar extends StatelessWidget {
   final String title;
   final double value;
   final Color color;
+  final String amount;
 
-  const SpendingBar(this.title, this.value, this.color, {super.key});
+  const SpendingBar({
+    super.key,
+    required this.title,
+    required this.value,
+    required this.color,
+    required this.amount,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title),
-        const SizedBox(height: 5),
-        LinearProgressIndicator(
-          value: value,
-          color: color,
-          backgroundColor: Colors.grey[300],
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(title),
+            Text(amount),
+          ],
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 6),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: LinearProgressIndicator(
+            value: value,
+            minHeight: 8,
+            color: color,
+            backgroundColor: Colors.grey[300],
+          ),
+        ),
+        const SizedBox(height: 12),
       ],
     );
   }

@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Welcome back,"),
-                        Text("STUDENT NAME",
+                        Text("Md Nazir Ullah Khan",
                             style: TextStyle(fontWeight: FontWeight.bold)),
                       ],
                     ),
@@ -37,19 +37,18 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // Balance Card
-            //const BalanceCard(),
+            const BalanceCard(),
 
             const SizedBox(height: 20),
 
             // Actions
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              /*children: const [
+              children: const [
                 ActionButton(icon: Icons.send, label: "Transfer"),
                 ActionButton(icon: Icons.receipt, label: "Pay Bills"),
                 ActionButton(icon: Icons.trending_up, label: "Invest"),
-              ],*/
+              ],
             ),
 
             const SizedBox(height: 20),
@@ -60,18 +59,30 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            /*const TransactionTile(
+            const TransactionTile(
               title: "Netflix Subscription",
               subtitle: "Entertainment • Today",
-              amount: "-\$19.99",
+              amount: "190.99TK",
               isIncome: false,
             ),
             const TransactionTile(
               title: "Salary Deposit",
               subtitle: "Income • Yesterday",
-              amount: "+\$3500",
+              amount: "3500TK",
               isIncome: true,
-            ),*/
+            ),
+            const TransactionTile(
+              title: "Coffe Shop",
+              subtitle: "Food and Drink • Today",
+              amount: "500TK",
+              isIncome: true,
+            ),
+            const TransactionTile(
+              title: "Grosery Store",
+              subtitle: "Shopping • Yesterday",
+              amount: "1500TK",
+              isIncome: true,
+            ),
           ],
         ),
       ),
