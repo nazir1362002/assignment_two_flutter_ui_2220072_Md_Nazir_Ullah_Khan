@@ -22,6 +22,22 @@ class ProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: ListView(
           children: [
+            Row(
+              children: const [
+                CircleAvatar(child: Text("S")),
+                SizedBox(width: 10),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Welcome back,"),
+                    Text(
+                      "Md Nazir Ullah Khan",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ],
+            ),
             const Center(
               child: CircleAvatar(
                 radius: 50,
